@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XMLresponse" targetNamespace="https://tracker.streamdata.com:31001/ProjectPortalService/XMLresponse.xsd" elementFormDefault="qualified" xmlns="https://tracker.streamdata.com:31001/ProjectPortalService/XMLresponse.xsd" xmlns:mstns="https://tracker.streamdata.com:31001/ProjectPortalService/XMLresponse.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.3">
+  <xs:element name="Status" type="StatusType">
+  </xs:element>
+  <xs:complexType name="StatusType">
+    <xs:sequence>
+      <xs:element name="Code" type="xs:int" />
+      <xs:element name="Message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CaseDetailType">
+    <xs:sequence>
+      <xs:element name="Customer" type="xs:string" />
+      <xs:element name="Contact" type="xs:string" />
+      <xs:element name="Case" type="xs:int" />
+      <xs:element name="Description" type="xs:string" />
+      <xs:element name="Status" type="xs:string" />
+      <xs:element name="Comment" type="xs:string" />
+      <xs:element name="TechRep" type="xs:string" />
+      <xs:element name="Created" type="xs:dateTime" />
+      <xs:element name="Updated" type="xs:dateTime" />
+      <xs:element name="ContractHours" type="xs:double" />
+      <xs:element name="ContractStatus" type="xs:string" />
+      <xs:element name="CausedBy" type="xs:string">
+      </xs:element>
+      <xs:element name="ElapsedHours" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CaseDetail" type="CaseDetailType">
+  </xs:element>
+  <xs:complexType name="SolidSenseType">
+    <xs:sequence>
+      <xs:element name="LogDate" type="xs:dateTime" />
+      <xs:element name="LogSource" type="xs:string" />
+      <xs:element name="ServerName" type="xs:string" />
+      <xs:element name="Port" type="xs:string" />
+      <xs:element name="Status" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolidSense" type="SolidSenseType">
+  </xs:element>
+</xs:schema>
